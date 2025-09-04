@@ -17,15 +17,18 @@ known_names = []
 
 #add more encodings here
 ##########################################################################
-# if len(ray_encodings) > 0: 
-#     known_encs.append(ray_encodings)
-#     known_names.append('Ray')
+if len(ray_encodings) > 0: 
+    known_encs.append(ray_encodings)
+    known_names.append('Ray')
 #############################################################################
 
-#main processing/display loop
+#flags
 #############################################################################
 new_stranger = False
 greeted = {name: False for name in known_names}
+
+#main processing/display loop
+#############################################################################
 while True: 
     shown, frame = cap.read()
     if not shown: 
